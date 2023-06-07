@@ -26,10 +26,5 @@ describe("API Server ", () => {
         expect(response.status).toEqual(200);
         expect(typeof response.body).toEqual("object");
     })
-    it("testing /person/fred", async () => {
-        const response = await request.get('/person/:name');
-        expect(response.status).toEqual(200);
-        expect(typeof response.body).toEqual("object");
-    })
 
 });

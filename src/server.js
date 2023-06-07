@@ -31,17 +31,17 @@ app.get('/info', sendRes)
 
 
 //---------------------------------------------
-app.get('/person/:name', Validation(''), (req, res) => {
+app.get('/person', Validation(''), (req, res) => {
     res.send({
-        name: req.name,
+        name: req.query.name,
     });
 });
 
-app.get('/person', (req, res, next) => {
-    const error = new Error('No name inserted');
-    next(error);
+// app.get('/person', (req, res, next) => {
+//     const error = new Error('No name inserted');
+//     next(error);
     
-  });
+//   });
 
 //   app.get('/person/:name', Validation(''),sendRes, (req, res,next) => {
 //     res.send({
